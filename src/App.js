@@ -1,10 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './component/Home';
+import "./scss/style.scss";
 
 function App() {
   return (
-    <div className="App">
-      복실이의 모험!
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
