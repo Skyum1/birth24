@@ -67,7 +67,8 @@
   border-radius: 30px 30px 30px 30px / 30px 30px 30px 30px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 82vh;
+  margin-top: 72vh;
+  margin-bottom: 5vh;
 }
 
 .dialogProfile {
@@ -82,6 +83,7 @@
   font-size: 15px;
   align-items: center; /* 수직 가운데 정렬 */
   margin-left: 30px;
+  max-width: 50vw;
 }
 
 .back {
@@ -92,4 +94,107 @@
   max-height: 100%;
   top: 0;
   z-index: -1;
+}
+
+.channelMain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  border-radius: 30px 30px 30px 30px / 30px 30px 30px 30px;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+.neck {
+  position: absolute;
+  max-width: 90vw;
+  max-height: 90vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.tickle {
+  position: absolute;
+  top: 57%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  max-width: 40vw;
+  max-height: 40vh;
+  visibility: hidden;
+}
+
+.gugudan {
+  font-family: 'TmoneyRoundWind', sans-serif; // 외부 폰트 적용
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(255 255 255 / 85%);
+  border-radius: 30px 30px 30px 30px / 30px 30px 30px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 25vh;
+  width: 80%;
+}
+
+.answer {
+  font-size: 25px;
+  text-align: center;
+  width: 65vw;
+}
+
+.answerBtn {
+  margin: 10px;
+  width: 150px;
+  height: 40px;
+  font-size: 25px;
+}
+
+.hpContainer {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 80%;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255 / 70%);
+  border: 2px solid black;
+}
+
+.hp {
+  left:0%;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.envelope {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.gameDiv {
+  transition: opacity 2s; /* 투명도 변경을 위한 transition 효과 */
+}
+
+.env {
+  font-family: 'TmoneyRoundWind', sans-serif; // 외부 폰트 적용
+  margin: 1rem;
+  font-size: 1.5rem;
+  line-height: 200%;
 }

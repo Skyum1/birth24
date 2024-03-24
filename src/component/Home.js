@@ -9,6 +9,7 @@ const Home = () => {
     const [click, setClick] = useState(false);
     const [openingEnd, setOpeningEnd] = useState(false);
     const [afterClick, setAfterClick] = useState(false);
+    const [mouse,setMouse] = useState(new Audio('/sound/select.ogg'));
     const text = " 복실이의 모험! ";
 
     const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Home = () => {
     const homeClick = () => {
       if(openingEnd) {
         setAfterClick(true);
+        mouse.play();
       }
     };
 
@@ -28,6 +30,7 @@ const Home = () => {
             } 
             if(opacity >= 1) {
               // 현재 인덱스가 텍스트 길이를 초과하면 애니메이션 종료
+              
               if (currentIndex >= text.length) {
                 setOpeningEnd(true); // 클릭 가능
                 setClick(prevClick => ! prevClick); // 점멸 
