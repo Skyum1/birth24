@@ -68,7 +68,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 72vh;
-  margin-bottom: 5vh;
+  margin-bottom: 30px;
 }
 
 .dialogProfile {
@@ -98,7 +98,7 @@
 
 .channelMain {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 70%;
@@ -118,7 +118,7 @@
   position: absolute;
   max-width: 90vw;
   max-height: 90vh;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   visibility: hidden;
@@ -126,7 +126,7 @@
 
 .tickle {
   position: absolute;
-  top: 57%;
+  top: 47%;
   left: 60%;
   transform: translate(-50%, -50%);
   max-width: 40vw;
@@ -191,7 +191,7 @@
 .gameDiv {
   transition: opacity 2s; /* 투명도 변경을 위한 transition 효과 */
   align-items: flex-end; /* 수직으로 아래로 정렬 */
-  height: 100vh; /* 높이를 화면의 100%로 설정 */
+  height: 100%; /* 높이를 화면의 100%로 설정 */
   display: grid;
 }
 
