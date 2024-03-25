@@ -81,7 +81,7 @@
 .dialogText {
   font-family: 'TmoneyRoundWind', sans-serif; // 외부 폰트 적용
   font-size: 15px;
-  align-items: center; /* 수직 가운데 정렬 */
+  align-items: center; 
   margin-left: 30px;
   max-width: 50vw;
 }
@@ -190,6 +190,9 @@
 
 .gameDiv {
   transition: opacity 2s; /* 투명도 변경을 위한 transition 효과 */
+  align-items: flex-end; /* 수직으로 아래로 정렬 */
+  height: 100vh; /* 높이를 화면의 100%로 설정 */
+  display: grid;
 }
 
 .env {
