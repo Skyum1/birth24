@@ -111,8 +111,19 @@ const Miki = () => {
     };
 
     useEffect(() => {
-        back.play();
-    }, []);
+        const handleCanPlayThrough = () => {
+            // 음악 파일이 로드되고 재생 가능할 때 실행되는 코드
+            back.play(); // 음악을 자동으로 재생
+          };
+      
+          // onCanPlayThrough 이벤트 핸들러를 추가
+          back.addEventListener('canplaythrough', handleCanPlayThrough);
+      
+          // 컴포넌트가 언마운트될 때 이벤트 핸들러를 제거
+          return () => {
+            back.removeEventListener('canplaythrough', handleCanPlayThrough);
+          };
+    }, [back]);
       
     return (
          <div className='gameDiv' onClick={gameClick}>
