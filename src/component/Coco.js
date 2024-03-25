@@ -50,6 +50,7 @@ const Coco = () => {
                 return;
             }   
             
+            if(dialogIndex == 1) back.play();
             if(dialogIndex == 4) setCocoVisible(true);
             else if(dialogIndex == 9) {
                 setGameStart(true);
@@ -87,9 +88,6 @@ const Coco = () => {
 
     }, [currentIndex, dialogIndex, dialogEnd, dialogList]);
 
-    useEffect(() => {
-        back.play();
-    }, []);
 
     return (
         <div className='gameDiv' onClick={gameClick}>

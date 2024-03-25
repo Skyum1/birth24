@@ -15,7 +15,7 @@ const Gundang = () => {
     const [homeOpacity, setHomeOpacity] = useState(1);
     const [close, setClose] = useState(false);
     const [mouse,setMouse] = useState(new Audio('/sound/select.ogg'));
-    const [back, setBack] =  useState(new Audio('/sound/background1.mp3'));
+    const [back, setBack] =  useState(new Audio('/sound/background4.mp3'));
     const [aya, setAya] = useState(new Audio('/sound/aya.wav'));
     const navigate = useNavigate();
 
