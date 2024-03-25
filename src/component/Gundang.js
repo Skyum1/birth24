@@ -15,7 +15,6 @@ const Gundang = () => {
     const [homeOpacity, setHomeOpacity] = useState(1);
     const [close, setClose] = useState(false);
     const [mouse,setMouse] = useState(new Audio('/sound/select.ogg'));
-    const [back, setBack] =  useState(new Audio('/sound/background4.mp3'));
     const [aya, setAya] = useState(new Audio('/sound/aya.wav'));
     const navigate = useNavigate();
 
@@ -102,7 +101,6 @@ const Gundang = () => {
                 setHomeOpacity(prevhomeOpacity => prevhomeOpacity - 0.1);
             } 
             else if(homeOpacity < 0){
-                back.pause();
                 navigate('/envelope');
             }
 
@@ -129,21 +127,6 @@ const Gundang = () => {
         return () => clearInterval(interval);
 
     }, [currentIndex, dialogIndex, dialogEnd, dialogList]);
-
-    useEffect(() => {
-        const handleCanPlayThrough = () => {
-            // 음악 파일이 로드되고 재생 가능할 때 실행되는 코드
-            back.play(); // 음악을 자동으로 재생
-          };
-      
-          // onCanPlayThrough 이벤트 핸들러를 추가
-          back.addEventListener('canplaythrough', handleCanPlayThrough);
-      
-          // 컴포넌트가 언마운트될 때 이벤트 핸들러를 제거
-          return () => {
-            back.removeEventListener('canplaythrough', handleCanPlayThrough);
-          };
-    }, [back]);
 
     return (
         <div className='gameDiv' onClick={gameClick} style={{ opacity:homeOpacity }}>
